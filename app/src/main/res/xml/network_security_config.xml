@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">mitmachim.top</domain>
+        <trust-anchors>
+            <certificates src="system"/>
+            <certificates src="@raw/netfree_x2_rsa"/>
+            <certificates src="@raw/netfree_x2_p256"/>
+            <certificates src="@raw/netfree_x2_p384"/>
+            <certificates src="@raw/netfree_x2_rsa_2037"/>
+            <certificates src="@raw/netfree_x2_ed25519"/>
+            <certificates src="@raw/netfree_isp_018"/>
+            <certificates src="@raw/netfree_isp_099"/>
+            <certificates src="@raw/netfree_isp_amitnet"/>
+            <certificates src="@raw/netfree_isp_bezeq"/>
+            <certificates src="@raw/netfree_isp_hadran_vpn"/>
+            <certificates src="@raw/netfree_isp_hot"/>
+            <certificates src="@raw/netfree_isp_ib_itc"/>
+            <certificates src="@raw/netfree_isp_ib_partner"/>
+            <certificates src="@raw/netfree_isp_ib_spotnet"/>
+            <certificates src="@raw/netfree_isp_itc"/>
+            <certificates src="@raw/netfree_isp_kosher_sim_cellcom"/>
+            <certificates src="@raw/netfree_isp_ksim_itc"/>
+            <certificates src="@raw/netfree_isp_ksim_partner"/>
+            <certificates src="@raw/netfree_isp_rl_internet"/>
+            <certificates src="@raw/netfree_isp_sim_kasher_triple_c"/>
+            <certificates src="@raw/netfree_isp_x2one"/>
+            <certificates src="@raw/netfree_isp_yossi"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

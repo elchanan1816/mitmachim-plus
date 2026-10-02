@@ -1,0 +1,58 @@
+package community.mitmachim.nativeapp
+import androidx.compose.ui.graphics.*
+import androidx.compose.ui.graphics.vector.*
+import androidx.compose.ui.unit.dp
+
+// Small local vector set: no downloaded icon font or large full-icon dependency.
+object AppIcons {
+ private fun icon(name:String,data:String)=ImageVector.Builder(name,24.dp,24.dp,24f,24f).addPath(PathParser().parsePathString(data).toNodes(),fill=null,stroke=SolidColor(Color.Black),strokeLineWidth=1.8f,strokeLineCap=StrokeCap.Round,strokeLineJoin=StrokeJoin.Round).build()
+ val ArrowBack=icon("back","M4 12h16m-6 -6l6 6 -6 6")
+ val KeyboardArrowRight=icon("next","M14 6l-6 6 6 6")
+ val PreviousPage=icon("previous-page","M9 6l6 6 -6 6")
+ val FirstPage=icon("first-page","M7 4v16M17 6l-6 6 6 6")
+ val LastPage=icon("last-page","M17 4v16M7 6l6 6 -6 6")
+ val Send=icon("send","M21 3L3 10l7 4 4 7zM10 14L21 3")
+ val Search=icon("search","M20 20l-5 -5M17 10a7 7 0 1 1 -14 0a7 7 0 1 1 14 0")
+ val Home=icon("home","M3 10l9 -7 9 7M5 9v12h5v-7h4v7h5V9")
+ val GridView=icon("categories","M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z")
+ val BookmarkBorder=icon("bookmark","M6 3h12v18l-6 -4 -6 4z")
+ val Bookmark=icon("saved","M6 3h12v18l-6 -4 -6 4zM9 9l2 2 4 -4")
+ val Bookmarks=BookmarkBorder
+ val PersonOutline=icon("person","M16 7a4 4 0 1 1 -8 0a4 4 0 1 1 8 0M4 21v-2a8 6 0 0 1 16 0v2")
+ val Person=PersonOutline
+ val NotificationsNone=icon("notifications","M4 17h16l-2 -3V9a6 6 0 0 0 -12 0v5zM10 21h4")
+ val Edit=icon("edit","M4 15L16 3l5 5L9 20l-6 1zM13 6l5 5")
+ val Forum=icon("forum","M3 3h16v12H9l-6 5zM8 8h7M8 11h4M21 8v13l-5 -3h-5")
+ val ChatBubbleOutline=icon("chat","M3 4h18v13H9l-6 4z")
+ val CloudOff=icon("offline","M3 3l18 18M5 16a5 5 0 0 1 0 -10M9 4a7 7 0 0 1 11 7a4 4 0 0 1 -1 7M5 18h10")
+ val Inbox=icon("inbox","M5 3h14l3 12v6H2v-6zM2 15h6l2 3h4l2 -3h6")
+ val PushPin=icon("pin","M8 3h8l-1 7 4 4H5l4 -4zM12 14v7")
+ val Computer=icon("computer","M3 3h18v13H3zM12 16v5M7 21h10")
+ val PhoneAndroid=icon("phone","M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1 -2 2H7a2 2 0 0 1 -2 -2V4a2 2 0 0 1 2 -2M10 18h4")
+ val AutoAwesome=icon("sparkles","M12 3l3 6 6 3 -6 3 -3 6 -3 -6 -6 -3 6 -3zM20 2v4M18 4h4")
+ val Code=icon("code","M7 6l-5 6 5 6M17 6l5 6 -5 6M14 3l-4 18")
+ val Memory=icon("hardware","M6 6h12v12H6zM9 9h6v6H9zM9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4")
+ val Groups=icon("community","M15 7a3 3 0 1 1 -6 0a3 3 0 1 1 6 0M5 21v-3a7 5 0 0 1 14 0v3M3 6a3 3 0 0 1 0 6M21 6a3 3 0 0 0 0 6M1 20v-3M23 20v-3")
+ val Image=icon("image","M3 3h18v18H3zM3 17l6 -7 6 7 3 -4 3 4M16 7h1")
+ val PlayCircleOutline=icon("play","M22 12a10 10 0 1 1 -20 0a10 10 0 1 1 20 0M9 7l8 5 -8 5z")
+ val ExpandLess=icon("collapse","M6 15l6 -6 6 6")
+ val ExpandMore=icon("expand","M6 9l6 6 6 -6")
+ val Reply=icon("reply","M15 6l5 5 -5 5M20 11H9a6 6 0 0 0 -6 6v3")
+ val Tune=icon("settings","M3 6h18M3 12h18M3 18h18M8 3v6M16 9v6M9 15v6")
+ val LockOpen=icon("login","M5 10h14v12H5zM8 10V6a4 4 0 0 1 8 0M12 15v3")
+ val Shield=icon("safety","M12 2l9 4v6c0 5 -5 8 -9 10 -4 -2 -9 -5 -9 -10V6zM8 12l3 3 5 -6")
+ val Visibility=icon("preview","M2 12q10 -16 20 0q-10 16 -20 0M15 12a3 3 0 1 1 -6 0a3 3 0 1 1 6 0")
+ val AttachFile=icon("attachment","M8 12v6a4 4 0 0 0 8 0V6a3 3 0 0 0 -6 0v11a1 1 0 0 0 2 0V7")
+ val Close=icon("close","M5 5l14 14M19 5L5 19")
+ val ThumbUp=icon("like","M7 10v11H4a2 2 0 0 1 -2 -2v-7a2 2 0 0 1 2 -2zM7 10l5 -7a2 2 0 0 1 3 2l-1 5h5a3 3 0 0 1 3 4l-2 6a3 3 0 0 1 -3 2H7")
+ val ThumbDown=icon("dislike","M7 14V3H4a2 2 0 0 0 -2 2v7a2 2 0 0 0 2 2zM7 14l5 7a2 2 0 0 0 3 -2l-1 -5h5a3 3 0 0 0 3 -4l-2 -6a3 3 0 0 0 -3 -2H7")
+ val More=icon("more","M12 5h.01M12 12h.01M12 19h.01")
+ val Network=icon("network","M2 8q10 -9 20 0M5 12q7 -6 14 0M8 16q4 -3 8 0M12 20h.01")
+ val Music=icon("music","M10 17V4l10 -2v13M10 17a3 3 0 1 1 -6 0a3 3 0 1 1 6 0M20 15a3 3 0 1 1 -6 0a3 3 0 1 1 6 0M10 8l10 -2")
+ val Book=icon("book","M12 5q-5 -3 -10 -1v15q5 -2 10 1q5 -3 10 -1V4q-5 -2 -10 1zM12 5v15M5 8l4 1M15 9l4 -1")
+ val Help=icon("help","M22 12a10 10 0 1 1 -20 0a10 10 0 1 1 20 0M9 8a3 3 0 1 1 4 3q-1 1 -1 3M12 17h.01")
+ val Download=icon("download","M12 3v12M7 10l5 5 5 -5M4 16v5h16v-5")
+ val Announcement=icon("announcement","M3 9h5l12 -5v16L8 15H3zM8 9v6M7 15l2 6h4l-2 -5")
+ val Printer=icon("printer","M6 8V2h12v6M6 17H3V8h18v9h-3M6 14h12v8H6zM17 11h1")
+ val Folder=icon("folder","M2 6V3h7l3 3h10v15H2z")
+}
