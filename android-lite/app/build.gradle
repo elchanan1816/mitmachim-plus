@@ -1,0 +1,39 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'community.mitmachim.lite'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'community.mitmachim.lite'
+        minSdk 19
+        targetSdk 35
+        versionCode 1
+        versionName '0.1-prototype'
+        testInstrumentationRunner 'community.mitmachim.lite.LiveReaderTest'
+    }
+    buildFeatures { buildConfig true }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+    signingConfigs {
+        distribution {
+            def signingPath = System.getenv('MITMACHIM_RELEASE_STORE_FILE')
+            def signingPassword = System.getenv('MITMACHIM_RELEASE_PASSWORD')
+            if (signingPath && signingPassword) {
+                storeFile file(signingPath)
+                storePassword signingPassword
+                keyAlias 'mitmachim-release'
+                keyPassword signingPassword
+                v1SigningEnabled true
+                v2SigningEnabled true
+            }
+        }
+    }
+    buildTypes {
+        debug { applicationIdSuffix '.debug'; versionNameSuffix '-debug' }
+        release { minifyEnabled false; signingConfig signingConfigs.distribution }
+    }
+    lint { abortOnError true; checkReleaseBuilds true }
+}
+dependencies {
+    // The reader deliberately has no third-party runtime dependencies.
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20240303'
+}

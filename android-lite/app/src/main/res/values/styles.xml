@@ -1,0 +1,7 @@
+<resources>
+    <style name="LiteTheme" parent="android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowBackground">#F3F7F8</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+</resources>

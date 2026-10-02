@@ -1,0 +1,10 @@
+<resources>
+    <style name="LiteTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:colorAccent">#087F8C</item>
+        <item name="android:windowBackground">#F3F7F8</item>
+        <item name="android:statusBarColor">#096A77</item>
+        <item name="android:navigationBarColor">#F3F7F8</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+</resources>
